@@ -1,4 +1,3 @@
-
 ngx_http_set_hash_module
 ------------------------
 
@@ -65,8 +64,8 @@ Installation
 To install, you must compile Nginx with OpenSSL and the Nginx Development Kit
 
 ./configure \
-    --with-module=/path/to/ngx_devel_kit \
-    --with-module=/path/to/ngx_http_set_hash
+    --add-module=/path/to/ngx_devel_kit \
+    --add-module=/path/to/ngx_http_set_hash
 make
 make install
 

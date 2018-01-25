@@ -1,13 +1,34 @@
 ngx_http_set_hash_module
-------------------------
+========================
 
-This module allows you to set the hash (as a hexadecimal string) of an arbitrary 
+New Repo Location
+=================
+
+The new location for this repo is :
+
+https://github.com/simplresty/ngx_set_hash_module
+
+This old location was :
+
+https://github.com/simpl/ngx_set_hash_module
+
+This is one of a number of Nginx modules that have been moved from 'simpl' to 'simplresty'.
+See [below](#see-also) for more information on how these organizations are now used.
+
+To prevent any problems with updates, all repos that were previously under the 'simpl' user
+will be forked and synced from the 'simplresty' repo. Sorry for any inconvenience this causes.
+
+
+Description
+===========
+
+This module allows you to set the hash (as a hexadecimal string) of an arbitrary
 string as the value of a variable.  Currently only three are available (MD5, SHA1
 and Murmurhash2 (32-bit)), but more will be added later.
 
 
 Usage
------
+=====
 
 set_[hash]          $var_name   [value]
 set_[hash]_upper    $var_name   [value]
@@ -18,9 +39,9 @@ set_[hash]_upper    $var_name   [value]
 
 
 Uppercase or lowercase?
------------------------
+=======================
 
-The suffix '_upper' indicates that the output should be in uppercase, otherwise any 
+The suffix '_upper' indicates that the output should be in uppercase, otherwise any
 letters are displayed in lowercase.
 
 Note : unless you have a good reason to use uppercase, you should use lowercase because
@@ -29,7 +50,7 @@ the conversion to uppercase adds overhead.
 
 
 Example
--------
+=======
 
 log_format  hashes  "value : $hash_value  "
                     "md5 : $md5 $md5_upper  "
@@ -59,7 +80,7 @@ This will log the md5/murmurhash 2/sha hash values of $request_uri to the log fi
 
 
 Installation
-------------
+============
 
 To install, you must compile Nginx with OpenSSL and the Nginx Development Kit
 
@@ -71,7 +92,7 @@ make install
 
 
 Note : If Nginx can't find your system's OpenSSL shared libraries and headers, you
-will either want to install the devel version using your package manager, e.g. 
+will either want to install the devel version using your package manager, e.g.
 
 apt-get/yum install openssl-dev
 
@@ -84,23 +105,28 @@ Note : This module will work ok with the latest version of Agentzh's set_misc mo
 and the result will be the same.
 
 
-
-
-
 TODO
-----
+====
 
 - More hash functions
 
 
 License
--------
+=======
 
 BSD
 
 
 Copyright
----------
+=========
 
 Marcus Clyne (c) 2010
 
+
+See Also
+========
+
+* **[SimplResty](https://github.com/simplresty)** : A web-application framework integrating OpenResty, Couchbase, React
+and much more
+* **[Simpl](https://github.com/simpl)** : A shell platform that integrates repositories stored on Github, Bitbucket
+etc., to help facilitate shell-based tasks

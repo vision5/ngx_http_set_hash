@@ -6,11 +6,11 @@ New Repo Location
 
 The new location for this repo is :
 
-https://github.com/simplresty/ngx_set_hash_module
+https://github.com/simplresty/ngx_http_set_hash
 
 This old location was :
 
-https://github.com/simpl/ngx_set_hash_module
+https://github.com/simpl/ngx_http_set_hash
 
 This is one of a number of Nginx modules that have been moved from 'simpl' to 'simplresty'.
 See [below](#see-also) for more information on how these organizations are now used.
